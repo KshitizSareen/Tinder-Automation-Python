@@ -95,7 +95,11 @@ class TinderBot():
                 print(count)
 
             except:
+                AddButton = self.driver.find_element_by_xpath(
+                    '//*[@id="modal-manager"]/div/div/div[2]/button[1]')
+                AddButton.click()
                 continue
+
             else:
                 if count == 10:
                     break
